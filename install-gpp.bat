@@ -6,11 +6,15 @@ echo   Installing g++ (C++ compiler) for Windows
 echo ============================================
 echo.
 
-:: --- Check if g++ is already installed ---
+:: --- Check if g++ and gdb are already installed ---
 where g++ >nul 2>&1
-if %errorlevel%==0 (
-    echo g++ is already installed:
+set "HAVE_GPP=%errorlevel%"
+where gdb >nul 2>&1
+set "HAVE_GDB=%errorlevel%"
+if "%HAVE_GPP%"=="0" if "%HAVE_GDB%"=="0" (
+    echo g++ and gdb are already installed:
     g++ --version
+    gdb --version
     echo.
     pause
     exit /b 0
@@ -44,8 +48,8 @@ if not exist "%MSYS2_DIR%\usr\bin\bash.exe" (
 
 :: --- Install the GCC/g++ toolchain via pacman ---
 echo.
-echo Installing the g++ toolchain via pacman...
-"%MSYS2_DIR%\usr\bin\bash.exe" -lc "pacman -Sy --noconfirm --needed mingw-w64-ucrt-x86_64-gcc"
+echo Installing the g++ toolchain and gdb via pacman...
+"%MSYS2_DIR%\usr\bin\bash.exe" -lc "pacman -Sy --noconfirm --needed mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-gdb"
 if %errorlevel% neq 0 (
     echo ERROR: Toolchain installation failed.
     pause
@@ -62,6 +66,7 @@ echo.
 echo ============================================
 echo   Done! Close and reopen your terminal,
 echo   then run:   g++ --version
+echo   and:        gdb --version
 echo ============================================
 echo.
 pause
