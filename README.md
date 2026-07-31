@@ -20,7 +20,7 @@ Tip : You open terminal by right-clicking empty space in the folder and selectin
    ```
    ./install-gpp.bat
    ```
-3. Wait for the installation to complete fully before moving on.
+3. Wait for the installation to complete fully before moving on. if it shows an error make sure theres no folder named 'msys64' in your C drive, if present please delete or rename.
 
 ---
 
