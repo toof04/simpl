@@ -10,6 +10,7 @@ Make sure the following files from this repository are downloaded to your machin
 - `install-gpp.bat`
 - `simplecpp-windows (1).zip`
 
+Tip : You open terminal by right-clicking empty space in the folder and selecting 'open in terminal'.
 ---
 
 ## 1. Install g++ and gdb
@@ -53,7 +54,9 @@ Make sure the following files from this repository are downloaded to your machin
    ./a
    ```
 
-If the program runs without any errors, **congratulations — your installation is complete and working correctly!** 
+If this program runs without any errors, **congratulations — your installation is complete and working correctly!** 
+<img width="617" height="652" alt="image" src="https://github.com/user-attachments/assets/93dd1859-e0b1-4937-b320-56a16037b9fc" />
+
 ---
 
 ## Troubleshooting
