@@ -4,6 +4,7 @@ This guide walks you through setting up a complete C++ development environment o
 
 ## Prerequisites
 
+Download the files from this page. Click the green "Code" at the top and then 'Download Zip'. Extract this folder.
 Make sure the following files from this repository are downloaded to your machine:
 
 - `install-gpp.bat`
